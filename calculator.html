@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>  
+      function dis(val) 
+      { 
+          document.getElementById("result").value+=val 
+      } 
+      function solve() 
+      { 
+          let x = document.getElementById("result").value 
+          let y = eval(x) 
+          document.getElementById("result").value = y 
+      } 
+      function clr() 
+      { 
+          document.getElementById("result").value = "" 
+      } 
+   </script> 
+   <style> 
+      *{margin: 0px;
+    padding: 0px;
+    }
+    .button {
+    width: 75px;
+    height: 50px;
+    font-size: 25px;
+    margin: 2px;
+    cursor: pointer;
+    border: none;
+    }
+    .result{
+    width: 335px;
+    margin: 5px black;
+    font-size: 25px;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    }
+    .text {
+    width: 200px;
+    margin: 5px;
+    border: black;
+    font-size: 25px;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    }
+    .number {
+    background-color: white;
+    font-weight: bold;
+    }
+    .main {
+    width: 327px;
+    height: 332px;
+    background-color: #efecec;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-50%);
+    border: 1px solid gray;
+    }
+    .symbol {
+    background-color: #fbfbfb;
+    }
+    .gray:hover {
+    background-color: #e0e0e0;
+    }
+    .blue:hover {
+    background-color: #03a9f4;
+    }
+    .title{
+       padding: 20px;
+    }
+   </style> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>   Calculator   </title>
+</head>
+<body>  
+   <center><div class="title" style="color:rgb(255, 166, 0)" ><b>Atul Calculator</b></div></center>
+   <center><table border="2"  colspan="4"> 
+      <input class="result" type="text" id="result"/>
+      <tr>
+         <td><input class="button number blue" type="button" value="(" onclick="dis('(')"/> </td> 
+         <td><input class="button number blue" type="button" value=")" onclick="dis(')')"/> </td> 
+         <td><input class="button number blue" type="button" value="%" onclick="dis('%')"/> </td> 
+         <td><input type="button" class="button number blue"value="AC" onclick="clr()"/> </td> 
+      </tr>
+      <div>
+       <tr> 
+          <td><input class="button number gray" type="button" value="1" onclick="dis('1')"/> </td> 
+          <td><input class="button number gray" type="button" value="2" onclick="dis('2')"/> </td> 
+          <td><input class="button number gray" type="button" value="3" onclick="dis('3')"/> </td> 
+          <td><input class="button symbol blue" type="button" value="/" onclick="dis('/')"/> </td> 
+       </tr> 
+       <tr> 
+          <td><input class="button number gray"type="button" value="4" onclick="dis('4')"/> </td> 
+          <td><input class="button number gray" type="button" value="5" onclick="dis('5')"/> </td> 
+          <td><input class="button number gray"type="button" value="6" onclick="dis('6')"/> </td> 
+          <td><input class="button symbol blue"type="button" value="-" onclick="dis('-')"/> </td> 
+       </tr> 
+       <tr> 
+          <td><input class="button number gray" type="button" value="7" onclick="dis('7')"/> </td> 
+          <td><input class="button number gray" type="button" value="8" onclick="dis('8')"/> </td> 
+          <td><input class="button number gray" type="button" value="9" onclick="dis('9')"/> </td> 
+          <td><input class="button symbol blue" type="button" value="+" onclick="dis('+')"/> </td> 
+       </tr> 
+       <tr> 
+          <td><input class="button number gray" type="button" value="." onclick="dis('.')"/> </td> 
+          <td><input class="button number gray" type="button" value="0" onclick="dis('0')"/> </td> 
+          <td><input class="button number blue" type="button" value="=" onclick="solve()"/> </td> 
+          <td><input class="button symbol blue" type="button" value="*" onclick="dis('*')"/> </td> 
+       </tr>
+      </div> 
+   </table>
+   </center>
+   </form>
+</body>
+</html>
